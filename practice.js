@@ -138,14 +138,86 @@ console.log(showObject(me));
 
 //NEXT PROBLEM
 //Create an Object called 'album' with 5 keys named different song titles that you make up, with the values being the length of each song.
-
   //Code Here
+
+var album = {
+  hey : '3:45',
+  fate : '4:12',
+  way : '3:35',
+  ate : '4:19',
+  bay : '2:59'
+  
+}
 
 //Now, loop through your album object alerting every song title individually.
 
   //Code Here
 
+function albumTitle( album ) {
+  var result = "";
+  for ( var prop in album ) {
+    if ( album.hasOwnProperty(prop) ) {
+      result += prop + "\n"; 
+    }
+  }
+  return result;
+}
 
+console.log(albumTitle(album));
+
+//  OUTPUT
+// hey
+// fate
+// way
+// ate
+// bay
+
+
+
+// A More Simple Way!!!
+// _____________________
+
+//Create another 'me' object with the following properties name, age, height, gender, married, eyeColor, hairColor. Fill those properties in with the appropriate values.
+​
+var me = {
+    name: "luke",
+    age: 23,
+    height: "74 inches",
+    gender: "m",
+    married: "no",
+    eyeColor: "blue",
+    hairColor: "blonde"
+};
+​
+//Now, loop through your object and alert every value. *Tyler --> 24 --> 6'0 --> Male, etc etc
+​
+for (prop in me) {  
+    alert(me[prop]);
+}
+​
+​
+​
+​
+//NEXT PROBLEM
+​
+​
+​
+​
+//Create an Object called 'album' with 5 keys named different song titles that you make up, with the values being the length of each song.
+​
+var album = {
+    girl: 120,
+    "babe how's it going": 243,
+    testing: 944,
+    another: 239,
+    peter: 232
+};
+​
+//Now, loop through your album object alerting every song title individually.
+​
+for(prop in album) {
+    alert(prop);
+}
 
 
 
@@ -180,18 +252,28 @@ var user = {
 that each value is truthy. If it's not truthy, remove it from the object. */
 
   //Code Here
+for (var prop in user) {
+  if (!(user[prop])) {
+   delete user[prop];
+  }
+}
+
+// b/c the property we are deleting is a variable --> we have to use dot notation
+
 
 //Once you get your truthy Object, Change the remaining values in the object to be specific to you (name: 'your name', username: 'your username'), rather than my information.
 
   //Code Here
+ user.name = 'anton';
+ user.username = 'ab';
+
+console.log(user);
+
 
 
 
 
 //NEXT PROBLEM
-
-
-
 
 var user = {
         name: 'Tyler McGinnis',
@@ -216,10 +298,12 @@ var user = {
 
 
 
+
+
+
+
+
 //NEXT PROBLEM
-
-
-
 
 //Create an empty object called methodCollection.
 
@@ -237,9 +321,12 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 
 
 
+
+
+
+
+
 //NEXT PROBLEM
-
-
 
 // Create a function called MakePerson which takes in name, birthday, ssn as its parameters and returns a new object with all of the information that you passed in.
 
@@ -268,4 +355,18 @@ object. One called 'alertHello' which alerts 'hello' and another method called l
 
   //Code Here
 
+function bindCard(person, card) {
+  var result = {};
+  for (var prop in person) {
+    result[prop] = person[prop];
+  }
+  for (var prop in card) {
+    result[prop] = person[prop];
+  }
+  return result;
+}
+
+
+var fullPerson = bindCard(person, card);
+console.log(fullPerson);
 
