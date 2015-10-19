@@ -93,8 +93,41 @@ Instead, console.log your whole backPack object and then check out the console. 
 
 //NEXT PROBLEM
 //Create another 'me' object with the following properties name, age, height, gender, married, eyeColor, hairColor. Fill those properties in with the appropriate values.
-
   //Code Here
+
+var me = {
+  name :  'anton',
+  age :   '25',
+  height :  '6 foot',
+  gender :  'male',
+  married :  'nope',
+  eyeColor :  'blue',
+  hairColor :  'brown',
+}
+
+function showObject(me) {
+  var result = "";
+  for (var prop in me) {
+    if( me.hasOwnProperty(prop) ) {
+      result +=  me[prop] + "\n";
+    } 
+  }              
+  return result;
+}
+
+
+console.log(showObject(me));
+// OUTPUT
+// anton
+// 25
+// 6 foot
+// male
+// nope
+// blue
+// brown
+
+
+
 
 //Now, loop through your object and alert every value. *Tyler --> 24 --> 6'0 --> Male, etc etc
 
@@ -104,10 +137,6 @@ Instead, console.log your whole backPack object and then check out the console. 
 
 
 //NEXT PROBLEM
-
-
-
-
 //Create an Object called 'album' with 5 keys named different song titles that you make up, with the values being the length of each song.
 
   //Code Here
@@ -119,11 +148,10 @@ Instead, console.log your whole backPack object and then check out the console. 
 
 
 
+
+
+
 //NEXT PROBLEM
-
-
-
-
 //Create an object called states that has 5 US states as properties with the values being their population (doesn't have to be accurate).
 
   //Code Here
