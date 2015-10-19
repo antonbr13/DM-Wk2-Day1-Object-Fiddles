@@ -17,9 +17,26 @@ alert(me.name);
 //Make a 'favoriteThings' object that contains the following keys: band, food, person, book, movie, holiday. Have the values to those keys be your favorite thing in that category.
   //Code here
   
+  var favoriteThings = {
+    band :  "Rooney",
+    food :  "sweet potatos",
+    person :  "ari",
+    book :  "the chalice and the blade",
+    movie:  "1984",
+    holiday :  "summer"
+  }
   
+  favoriteThings.car = "durango";
+  favoriteThings["brand"] = "organic";
   
+//Using square bracket notation:
+// obj["key3"] = "value3";
+
+// Using dot notation:
+// obj.key3 = "value3";
   
+favoriteThings.food = "lettuce";
+favoriteThings["book"] = "50 Shades of Gray";
 
 
 //After you've made your object, add another key named 'car' with the value being your favorite car and then another key named 'brand' with the value being your favorite brand.
@@ -34,10 +51,12 @@ alert(me.name);
 
 
 
+
+
+
+
+
 //NEXT PROBLEM
-
-
-
 /*Create an empty Object called backPack. Now, create a variable called 'item'
 and set it equal to the string 'firstPocket'. Using bracket notation,
 add a 'firstPocket' key (or property) to backPack, using 'item'.
