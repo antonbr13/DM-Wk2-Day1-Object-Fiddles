@@ -64,8 +64,15 @@ Set the value of that key to 'chapstick'.
 
 Using dot notation, add another key (or property) to your backPack object
 that is named color, with the value being the color of your backpack. */
-
   //Code here
+  var item = "firstPocket";
+  
+  var backPack = {
+    
+  }
+ backPack[item] = "chapstick";
+ alert(backPack);
+ console.log(backPack);
 
 //After you do the above, alert your entire backPack object.
 
@@ -80,11 +87,11 @@ Instead, console.log your whole backPack object and then check out the console. 
 
 
 
+
+
+
+
 //NEXT PROBLEM
-
-
-
-
 //Create another 'me' object with the following properties name, age, height, gender, married, eyeColor, hairColor. Fill those properties in with the appropriate values.
 
   //Code Here
